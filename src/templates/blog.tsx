@@ -69,7 +69,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   };
 };
 
-const liveBlog = ({ document }: TemplateRenderProps) => {
+const Blog = ({ document }: TemplateRenderProps) => {
   const { name, datePosted, c_body, c_coverPhoto } = document;
 
   return (
