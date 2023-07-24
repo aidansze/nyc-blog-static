@@ -13,49 +13,49 @@ import Main from "../components/layouts/Main";
 import Container from "../components/Container";
 import { formatDate } from "../utils/formatDate";
 
-export const config: TemplateConfig = {
-  stream: {
-    $id: "home",
-    fields: [
-      "id",
-      "name",
-      "c_coverPhoto",
-      "c_heading",
-      "c_subHeading",
-      "slug",
-      "c_featuredBlogs.id",
-      "c_featuredBlogs.name",
-      "c_featuredBlogs.slug",
-      "c_featuredBlogs.c_coverPhoto",
-      "c_featuredBlogs.c_description",
-      "c_featuredBlogs.datePosted",
-    ],
-    filter: {
-      entityTypes: ["ce_homePage"],
-    },
-    localization: {
-      locales: ["en"],
-      primary: false,
-    },
-  },
-};
+// export const config: TemplateConfig = {
+//   stream: {
+//     $id: "home",
+//     fields: [
+//       "id",
+//       "name",
+//       "c_coverPhoto",
+//       "c_heading",
+//       "c_subHeading",
+//       "slug",
+//       "c_featuredBlogs.id",
+//       "c_featuredBlogs.name",
+//       "c_featuredBlogs.slug",
+//       "c_featuredBlogs.c_coverPhoto",
+//       "c_featuredBlogs.c_description",
+//       "c_featuredBlogs.datePosted",
+//     ],
+//     filter: {
+//       entityTypes: ["ce_homePage"],
+//     },
+//     localization: {
+//       locales: ["en"],
+//       primary: false,
+//     },
+//   },
+// };
 
 export const getPath: GetPath<TemplateProps> = () => {
-  return `index.html`;
+  return `Home.html`;
 };
 
-export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = (
-  data
-): HeadConfig => {
-  return {
-    title: "Blog Home",
-    charset: "UTF-8",
-    viewport: "width=device-width, initial-scale=1",
-  };
-};
+// export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = (
+//    data
+// ): HeadConfig => {
+//   return {
+//     title: "Blog Home",
+//     charset: "UTF-8",
+//     viewport: "width=device-width, initial-scale=1",
+//   };
+// };
 
-const Home = ({ document }: TemplateRenderProps) => {
-  const { c_coverPhoto, c_heading, c_subHeading, c_featuredBlogs } = document;
+const Home = (/*{ document }: TemplateRenderProps*/) => {
+  //const { c_coverPhoto, c_heading, c_subHeading, c_featuredBlogs } = document;
 
   return (
     <Main>
@@ -75,21 +75,25 @@ const Home = ({ document }: TemplateRenderProps) => {
                   <div className="mx-auto max-w-2xl py-24  lg:max-w-none lg:py-64">
                     <div className="lg:pr-16">
                       <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl xl:text-6xl">
-                        {c_heading}
+                        {/* {c_heading} */}
+                        Header Here
                       </h1>
-                      <p className="mt-4 text-xl text-white">{c_subHeading}</p>
+                      <p className="mt-4 text-xl text-white">
+                        {/* {c_subHeading} */}
+                        Subheader Here
+                        </p>
                     </div>
                   </div>
                 </div>
               </div>
-              {c_coverPhoto && (
+              {/* {c_coverPhoto && (
                 <div className="h-48 w-full sm:h-64 lg:absolute lg:right-0 lg:top-0 lg:h-full lg:w-1/2">
                   <Image
-                    image={c_coverPhoto}
+                    // image={c_coverPhoto}
                     className="h-full w-full object-cover object-center"
                   />
                 </div>
-              )}
+              )} */}
             </div>
           </div>
         </div>
@@ -100,7 +104,7 @@ const Home = ({ document }: TemplateRenderProps) => {
                 Neighborhoods
               </h2>
               <div className="mt-16 space-y-20 lg:mt-20 lg:space-y-20">
-                {c_featuredBlogs?.map((blog) => (
+                {/* {c_featuredBlogs?.map((blog) => (
                   <article
                     key={blog.id}
                     className="relative isolate flex flex-col gap-8 lg:flex-row"
@@ -133,7 +137,7 @@ const Home = ({ document }: TemplateRenderProps) => {
                       </div>
                     </div>
                   </article>
-                ))}
+                ))} */}
               </div>
             </div>
           </div>
