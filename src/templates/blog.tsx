@@ -37,9 +37,11 @@ export const config: TemplateConfig = {
   },
 };
 
+
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
   return document.slug;
 };
+
 
 export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   document,
@@ -67,7 +69,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   };
 };
 
-const Blog = ({ document }: TemplateRenderProps) => {
+const liveBlog = ({ document }: TemplateRenderProps) => {
   const { name, datePosted, c_body, c_coverPhoto } = document;
 
   return (

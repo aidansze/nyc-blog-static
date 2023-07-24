@@ -48,7 +48,7 @@ import { formatDate } from "../utils/formatDate";
 //STATIC PATH CONFIGURATION
 
 export const getPath: GetPath<TemplateProps> = () => {
-  return `staticBlog.html`;
+  return `Blog.html`;
 };
 
 
@@ -79,7 +79,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   };
 };
 
-const staticBlog = (/*{ document }: TemplateRenderProps*/) => {
+const Blog = (/*{ document }: TemplateRenderProps*/) => {
   //const { name, datePosted, c_body, c_coverPhoto } = document;
 
   return (
@@ -97,4 +97,4 @@ const staticBlog = (/*{ document }: TemplateRenderProps*/) => {
   );
 };
 
-export default staticBlog;
+export default StaticBlog;
