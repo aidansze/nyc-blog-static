@@ -76,11 +76,11 @@ const staticHome = (/*{ document }: TemplateRenderProps*/) => {
                     <div className="lg:pr-16">
                       <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl xl:text-6xl">
                         {/* {c_heading} */}
-                        Heading Here
+                        Header Here
                       </h1>
                       <p className="mt-4 text-xl text-white">
                         {/* {c_subHeading} */}
-                        SubHeading Here
+                        Subheader Here
                         </p>
                     </div>
                   </div>
